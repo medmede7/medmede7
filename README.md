@@ -1,10 +1,8 @@
 - 👋 Hi, I’m @medmede7
 - 👀 I’m interested in smartbuildings and smarthomes
 - 🌱 I’m currently learning Python, C, SQL and all langages which may allow me to create a boxe for home automation
-- 💞️ I’m looking to collaborate
+- 💞️ I’m looking for a place where store my file and if it happen, help and support of the comunity.
 - 📫 How to reach me mederic.boistard@gmail.com
-- With my low level programming background for embedded electronic, I was used to use langage as C, assembler and VHDL.
-Now, I'm looking to open my mind to data science and big data mining oriented langages as Python (already learned a little)
 
 
 <!---
