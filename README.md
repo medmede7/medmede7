@@ -2,7 +2,7 @@
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://t4.ftcdn.net/jpg/01/87/42/97/360_F_187429738_oJHHm3eHr4PgvitblVqgmbBI5mTxpRmT.jpg">
  <source media="(prefers-color-scheme: light)" srcset="https://t4.ftcdn.net/jpg/01/87/42/97/360_F_187429738_oJHHm3eHr4PgvitblVqgmbBI5mTxpRmT.jpg">
- <img alt="YOUR-ALT-TEXT" src="https://t4.ftcdn.net/jpg/01/87/42/97/360_F_187429738_oJHHm3eHr4PgvitblVqgmbBI5mTxpRmT.jpg">
+ <img alt="Horse head logo" src="https://t4.ftcdn.net/jpg/01/87/42/97/360_F_187429738_oJHHm3eHr4PgvitblVqgmbBI5mTxpRmT.jpg">
 </picture>
 
 , I’m @medmede7
