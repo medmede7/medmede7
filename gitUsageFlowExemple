@@ -1,3 +1,6 @@
+Git usage flow and tricks
+
+
 -------------------------- Update from remote dir ------------------------- 
 (base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git pull origin
 Username for 'https://github.com': medmede7
