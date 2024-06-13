@@ -155,3 +155,5 @@ README.md
 (base) medmede@UBUNTUTHINKPAD:~/git/medmede7$ git checkout gitUsageFlow
 Switched to branch 'gitUsageFlow'
 -------------------------------------------------------------------------------
+
+aliases: gitNewLife = push https://github.com/medmede7/NewLife
