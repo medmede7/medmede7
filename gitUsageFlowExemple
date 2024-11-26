@@ -1,0 +1,159 @@
+Git usage flow and tricks
+
+
+-------------------------- Update from remote dir ------------------------- 
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git pull origin
+Username for 'https://github.com': medmede7
+Password for 'https://medmede7@github.com': 
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.29 KiB | 1.29 MiB/s, done.
+From https://github.com/edmede7/NewLife
+   3aa79c3..ab45600  main       -> origin/main
+Updating 3aa79c3..ab45600
+Fast-forward
+ Class diagram | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+ create mode 100644 Class diagram
+--------------------------------------------------------------------------
+
+-------------------------------- Create a new branch ----------------------
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git branch JSonFiles
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git config --list
+user.email=mederic.boistard@gmail.com
+user.name=medmede7
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/medmede7/NewLife.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git checkout  JSonFiles
+Switched to branch 'JSonFiles'
+------------------------------------------------------------------------------
+
+---------------------- creat a new file (local) ------------------------------
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ vim mondayOddWeek.json
+------------------------------------------------------------------------------
+
+---------------------- add file and commit -----------------------------------
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git add .
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git commit
+[JSonFiles 51b40bc]  On branch JSonFiles  Changes to be committed: 	modified:   README.md 	new file:   mondayOddWeek.json
+ 2 files changed, 58 insertions(+)
+ create mode 100644 mondayOddWeek.json
+------------------------------------------------------------------------------
+
+---------------------- push commit to the remode dir -------------------------
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git push https://github.com/medmede7/NewLife JSonFiles
+Username for 'https://github.com': medmede7
+Password for 'https://medmede7@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 788 bytes | 788.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'JSonFiles' on GitHub by visiting:
+remote:      https://github.com/medmede7/NewLife/pull/new/JSonFiles
+remote: 
+To https://github.com/medmede7/NewLife
+ * [new branch]      JSonFiles -> JSonFiles
+------------------------------------------------------------------------------
+
+---------------------- push commit to the remode dir -------------------------
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git add . && git commit
+[JSonFiles 4752378]  On branch JSonFiles  Changes to be committed: 	modified:   README.md 	new file:   mondayEvenWeek.json
+ 2 files changed, 55 insertions(+)
+ create mode 100644 mondayEvenWeek.json
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git push https://github.com/medmede7/NewLife JSonFiles
+Username for 'https://github.com': medmede7
+Password for 'https://medmede7@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 781 bytes | 781.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/medmede7/NewLife
+   51b40bc..4752378  JSonFiles -> JSonFiles
+------------------------------------------------------------------------------
+
+# Merge done directly on git by trying a pull request
+
+-------------------------------- Display commits -----------------------------
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ git show
+commit a3da7d1d58e173fd832fb1490ad36532530e6c0b (HEAD -> JSonFiles)
+Author: medmede7 <mederic.boistard@gmail.com>
+Date:   Wed Jun 12 20:32:46 2024 +0200
+
+     On branch JSonFiles
+     Changes to be committed:
+            new file:   main.cpp
+                    get and display actual time
+                    TODO:
+                            move to a dedicated function that manage time
+                            create the time
+                            tips: display to time each minute
+    
+            new file:   newLife
+                    Executable for main
+
+diff --git a/main.cpp b/main.cpp
+new file mode 100644
+index 0000000..0471ad7
+--- /dev/null
++++ b/main.cpp
+@@ -0,0 +1,20 @@
++#include <iostream>
++#include <ctime>
++
++using namespace std;
++
++
++
++
++
++
++int main(int, char*[]){
++       time_t now;
++       struct tm* timeInfo;
++       
++       cout<<"--\tGood morning\t--"<<endl<<"Your day start right now !"<<endl;
++       time(&now);
++       timeInfo = localtime(&now);
++       cout<<"start time is:"<<asctime(timeInfo)<<endl;
++       return 0;
++}
+diff --git a/newLife b/newLife
+new file mode 100755
+index 0000000..0251571
+Binary files /dev/null and b/newLife differ
+(base) medmede@UBUNTUTHINKPAD:~/git/NewLife$ 
+
+-------------------------- clone another repo for git doc -----------------
+(base) medmede@UBUNTUTHINKPAD:~/git$ git clone https://github.com/medmede7/medmede7
+Cloning into 'medmede7'...
+remote: Enumerating objects: 33, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 33 (delta 10), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (33/33), 9.57 KiB | 1.20 MiB/s, done.
+Resolving deltas: 100% (10/10), done.
+(base) medmede@UBUNTUTHINKPAD:~/git$ ls
+cpp  medmede7  NewLife  tfile
+(base) medmede@UBUNTUTHINKPAD:~/git$ cd medmede7/
+(base) medmede@UBUNTUTHINKPAD:~/git/medmede7$ ls
+README.md
+(base) medmede@UBUNTUTHINKPAD:~/git/medmede7$ git branch gitUsageFlow
+(base) medmede@UBUNTUTHINKPAD:~/git/medmede7$ git checkout gitUsageFlow
+Switched to branch 'gitUsageFlow'
+-------------------------------------------------------------------------------
+
+aliases: gitNewLife = push https://github.com/medmede7/NewLife
