@@ -5,7 +5,7 @@
 #	Creation date:			26-Nov-2024
 #	Revision code:			0.0
 #	Creator:			medmede7
-#	Description:			this is the template for python module it defines standards and 
+#	Description:			this is the template for python module. It defines standards and 
 #					rules to write python code and element
 #															#
 #########################################################################################################################
@@ -83,7 +83,7 @@ class my_class:
 # - define attribute here -
 #	
 # 	Constructor
-	def __init__():
+	def __init__(self):
 		pass
 #	Method
 # ' define other method here
@@ -135,23 +135,23 @@ def TestFunction_my_class():
 #	========================================================	#	
 #########################################################################
 #															#
-#					-- END OF CLASS TEST FUNCTION SECTION --					#
+#					-- END OF SECTION CLASS TEST FUNCTION --					#
 #########################################################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #########################################################################################################################
-#					-- FUNCTION SECTION --								#
+#					-- SECTION FUNCTION --								#
 #															#
 #	========================================================	#	
 #			-- FUNCTION MyFunction --			#
 #	Function  docString: define usages of the function
-def MyFunction():
+def MyFunction(param0, param1):
 
 #docString:
 	"""
 	NAME
 		MyFunction	
 	SYNOPSYS
-		MyFunction(param1, param2)
+		MyFunction(param0, param1)
 	DESCRIPTION
 		Describe here help for the function
 	AUTHOR
@@ -159,7 +159,7 @@ def MyFunction():
 	REPORTING BUGS
 		Date - bug description
 	EXAMPLE
-		returnValue = MyFunction(param1, param2)                
+		returnValue = MyFunction(param0, param1)                
 	SEE ALSO                                   
 	"""                                           
 
@@ -175,11 +175,11 @@ def MyFunction():
 #	========================================================	#	
 #########################################################################
 #															#
-#					-- END OF FUNCTION SECTION --							#
+#					-- END OF SECTION FUNCTION --							#
 #########################################################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #########################################################################################################################
-#					-- TEST FUNCTION SECTION --							#
+#					-- SECTION TEST FUNCTION --							#
 #															#
 #	========================================================	#	
 #		-- TEST FUNCTION TestMyFunction --			#
@@ -207,44 +207,41 @@ def TestMyFunction():
 #	declare your variable here                                                                                      	
 	myVar = 0                                                                                                        	
 #process
-	if MyFunction(1,2):
+	if not MyFunction(1,2):
 		return 'test of Myfunction is pass :)'                                                                                                        
 # return
 	return 'test of MyFunction is fail :(' 
 #
-#		--  END OF TEST FUNCTION MyFunction --		#
+#		--  END OF TEST FUNCTION TestMyFunction --		#
 #	========================================================	#	
 #########################################################################
 #															#
-#					-- END OF TEST FUNCTION SECTION --						#
+#					-- END OF SECTION TEST FUNCTION --						#
 #########################################################################################################################
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #########################################################################################################################
-#					-- MAIN SECTION --								#
+#						-- MAIN SECTION --							#
 #															#
 
 if __name__=="__main__":
-	print('module ', module.name, ' start process ', __name__)
 	module = Path(__file__)
+	print('module ', module.name, ' start process ', __name__)
 #main process
 	print(TestFunction_my_class())
-	print(TestFunction_my_class())	
+	print(TestMyFunction())	
+
+
+
+
+
+
+
+
+
+
 
 #end of main process
-	
- 	print('module ', module.name, ' end process ', __name__)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	print('module ', module.name, ' end process ', __name__)
+#															#
+#						-- END OF MAIN --							#
+#########################################################################################################################
